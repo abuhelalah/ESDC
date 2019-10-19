@@ -2,22 +2,28 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Sat Oct 19 01:11:12 2019
-# Process ID: 13095
+# Start of session at: Sat Oct 19 21:53:46 2019
+# Process ID: 9181
 # Current directory: /home/ebrahim/vivado/Lab1
 # Command line: vivado
 # Log file: /home/ebrahim/vivado/Lab1/vivado.log
 # Journal file: /home/ebrahim/vivado/Lab1/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/ebrahim/vivado/Lab1/Lab1_sf/Lab1_sf.xpr
+open_project /home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ebrahim/vivado/Lab1/comparator'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ebrahim/vivado/Lab1/VGA_DRIVER'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.2/data/ip'.
-open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 6104.703 ; gain = 155.031 ; free physical = 5594 ; free virtual = 30474
+WARNING: [IP_Flow 19-3664] IP 'Lab1_sf_processing_system7_0_2' generated file not found '/home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.srcs/sources_1/bd/Lab1_sf/ip/Lab1_sf_processing_system7_0_2/sim/libps7.so'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'Lab1_sf_processing_system7_0_2' generated file not found '/home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.srcs/sources_1/bd/Lab1_sf/ip/Lab1_sf_processing_system7_0_2/sim/libps7.dll'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'Lab1_sf_processing_system7_0_2' generated file not found '/home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.srcs/sources_1/bd/Lab1_sf/ip/Lab1_sf_processing_system7_0_2/sim/libremoteport.so'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'Lab1_sf_processing_system7_0_2' generated file not found '/home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.srcs/sources_1/bd/Lab1_sf/ip/Lab1_sf_processing_system7_0_2/sim/libremoteport.dll'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 6093.125 ; gain = 142.203 ; free physical = 2527 ; free virtual = 29132
 update_compile_order -fileset sources_1
+file copy -force /home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.runs/impl_1/Lab1_sf_wrapper.sysdef /home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.sdk/Lab1_sf_wrapper.hdf
+
 exit
-INFO: [Common 17-206] Exiting Vivado at Sat Oct 19 01:12:14 2019...
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 19 21:55:03 2019...

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="Lab1_sf_xbar_0_synth_1" LaunchDir="/home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.runs/Lab1_sf_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Lab1_sf_auto_pc_0_synth_1" LaunchDir="/home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.runs/Lab1_sf_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Lab1_sf_screen_object_0_0_synth_1" LaunchDir="/home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.runs/Lab1_sf_screen_object_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Lab1_sf_xlconstant_0_0_synth_1" LaunchDir="/home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.runs/Lab1_sf_xlconstant_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Lab1_sf_readRow_0_synth_1" LaunchDir="/home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.runs/Lab1_sf_readRow_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="Lab1_sf_xbar_0_synth_1"/>
+		<Parent Id="Lab1_sf_auto_pc_0_synth_1"/>
+		<Parent Id="Lab1_sf_screen_object_0_0_synth_1"/>
+		<Parent Id="Lab1_sf_xlconstant_0_0_synth_1"/>
+		<Parent Id="Lab1_sf_readRow_0_synth_1"/>
+	</Run>
+</Runs>
+

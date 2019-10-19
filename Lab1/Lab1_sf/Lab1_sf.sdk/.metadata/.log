@@ -8953,3 +8953,6 @@ java.lang.NullPointerException
 
 !ENTRY com.xilinx.sdk.utils 0 0 2019-10-19 19:01:38.732
 !MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-10-19 20:34:11.233
+!MESSAGE Executed Webtalk command

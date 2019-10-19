@@ -2,13 +2,15 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Sat Oct 19 01:11:12 2019
-# Process ID: 13095
+# Start of session at: Sat Oct 19 21:53:46 2019
+# Process ID: 9181
 # Current directory: /home/ebrahim/vivado/Lab1
 # Command line: vivado
 # Log file: /home/ebrahim/vivado/Lab1/vivado.log
 # Journal file: /home/ebrahim/vivado/Lab1/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/ebrahim/vivado/Lab1/Lab1_sf/Lab1_sf.xpr
+open_project /home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.xpr
 update_compile_order -fileset sources_1
+file copy -force /home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.runs/impl_1/Lab1_sf_wrapper.sysdef /home/ebrahim/vivado/Lab1/mixed_approach/mixed_approach.sdk/Lab1_sf_wrapper.hdf
+
