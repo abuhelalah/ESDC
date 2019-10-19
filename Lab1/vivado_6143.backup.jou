@@ -1,0 +1,173 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Oct 18 23:44:50 2019
+# Process ID: 6143
+# Current directory: /home/ebrahim/vivado/Lab1
+# Command line: vivado
+# Log file: /home/ebrahim/vivado/Lab1/vivado.log
+# Journal file: /home/ebrahim/vivado/Lab1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project Lab1_sf /home/ebrahim/vivado/Lab1/Lab1_sf -part xc7z010clg400-1
+set_property board_part digilentinc.com:zybo:part0:2.0 [current_project]
+set_property target_language VHDL [current_project]
+ipx::infer_core -vendor user.org -library user -taxonomy /UserIP /home/ebrahim/vivado/Lab1/VGA_DRIVER
+ipx::edit_ip_in_project -upgrade true -name VGA_ip_project -directory /home/ebrahim/vivado/Lab1/Lab1_sf/Lab1_sf.tmp /home/ebrahim/vivado/Lab1/VGA_DRIVER/component.xml
+ipx::current_core /home/ebrahim/vivado/Lab1/VGA_DRIVER/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+set_property  ip_repo_paths  /home/ebrahim/vivado/Lab1/VGA_DRIVER [current_project]
+update_ip_catalog
+ipx::infer_core -vendor user.org -library user -taxonomy /UserIP /home/ebrahim/vivado/Lab1/comparator
+ipx::edit_ip_in_project -upgrade true -name com_ip_project -directory /home/ebrahim/vivado/Lab1/Lab1_sf/Lab1_sf.tmp /home/ebrahim/vivado/Lab1/comparator/component.xml
+ipx::current_core /home/ebrahim/vivado/Lab1/comparator/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+set_property  ip_repo_paths  {/home/ebrahim/vivado/Lab1/comparator /home/ebrahim/vivado/Lab1/VGA_DRIVER} [current_project]
+update_ip_catalog
+create_bd_design "Lab1_sf"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+set_property location {1 247 -178} [get_bd_cells processing_system7_0]
+startgroup
+make_bd_pins_external  [get_bd_cells processing_system7_0]
+make_bd_intf_pins_external  [get_bd_cells processing_system7_0]
+endgroup
+delete_bd_objs [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_intf_ports M_AXI_GP0]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0] [get_bd_ports FCLK_CLK0]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_ports FCLK_RESET0_N]
+delete_bd_objs [get_bd_nets M_AXI_GP0_ACLK_1] [get_bd_ports M_AXI_GP0_ACLK]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_DDR] [get_bd_intf_nets processing_system7_0_FIXED_IO] [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+set_property location {1 145 -195} [get_bd_cells processing_system7_0]
+connect_bd_intf_net [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
+set_property location {437 -229} [get_bd_intf_ports DDR]
+connect_bd_intf_net [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
+set_property location {441 -206} [get_bd_intf_ports FIXED_IO]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_FIXED_IO] [get_bd_intf_nets processing_system7_0_DDR] [get_bd_cells processing_system7_0]
+delete_bd_objs [get_bd_intf_ports DDR]
+delete_bd_objs [get_bd_intf_ports FIXED_IO]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+set_property location {1 116 -251} [get_bd_cells axi_gpio_0]
+set_property name buttons [get_bd_cells axi_gpio_0]
+startgroup
+set_property -dict [list CONFIG.GPIO_BOARD_INTERFACE {btns_4bits} CONFIG.C_GPIO_WIDTH {4} CONFIG.C_ALL_INPUTS {1}] [get_bd_cells buttons]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+set_property location {2 289 -132} [get_bd_cells axi_gpio_0]
+set_property name leds [get_bd_cells axi_gpio_0]
+startgroup
+set_property -dict [list CONFIG.GPIO_BOARD_INTERFACE {leds_4bits} CONFIG.C_GPIO_WIDTH {4} CONFIG.C_ALL_OUTPUTS {1}] [get_bd_cells leds]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+set_property location {2 293 5} [get_bd_cells axi_gpio_0]
+set_property name RGB [get_bd_cells axi_gpio_0]
+startgroup
+set_property -dict [list CONFIG.C_GPIO_WIDTH {3} CONFIG.C_ALL_OUTPUTS {1}] [get_bd_cells RGB]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+set_property location {2 390 129} [get_bd_cells axi_gpio_0]
+set_property location {2 669 -67} [get_bd_cells processing_system7_0]
+set_property name readCol [get_bd_cells axi_gpio_0]
+startgroup
+set_property -dict [list CONFIG.C_GPIO_WIDTH {5} CONFIG.C_ALL_INPUTS {1}] [get_bd_cells readCol]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+set_property location {2 333 235} [get_bd_cells axi_gpio_0]
+set_property name readRow [get_bd_cells axi_gpio_0]
+startgroup
+set_property -dict [list CONFIG.C_GPIO_WIDTH {5} CONFIG.C_ALL_INPUTS {1}] [get_bd_cells readRow]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins buttons/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "btns_4bits ( 4 Buttons ) " }  [get_bd_intf_pins buttons/GPIO]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins leds/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "leds_4bits ( 4 LEDs ) " }  [get_bd_intf_pins leds/GPIO]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins RGB/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins readCol/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins readRow/S_AXI]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:VGA_SYNC:1.0 VGA_SYNC_0
+endgroup
+set_property location {3 696 -135} [get_bd_cells VGA_SYNC_0]
+set_property location {4 1716 323} [get_bd_cells VGA_SYNC_0]
+set_property location {4 1592 362} [get_bd_cells VGA_SYNC_0]
+set_property location {4 1592 392} [get_bd_cells VGA_SYNC_0]
+set_property location {4 1593 512} [get_bd_cells VGA_SYNC_0]
+set_property location {4 1608 479} [get_bd_cells VGA_SYNC_0]
+set_property location {4 1614 441} [get_bd_cells VGA_SYNC_0]
+connect_bd_net [get_bd_pins VGA_SYNC_0/color_in] [get_bd_pins RGB/gpio_io_o]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property location {5 1684 614} [get_bd_cells xlslice_0]
+set_property name SliceCol [get_bd_cells xlslice_0]
+startgroup
+set_property -dict [list CONFIG.DIN_TO {5} CONFIG.DIN_FROM {9} CONFIG.DIN_WIDTH {10} CONFIG.DIN_FROM {9} CONFIG.DOUT_WIDTH {5}] [get_bd_cells SliceCol]
+endgroup
+connect_bd_net [get_bd_pins VGA_SYNC_0/pixel_column] [get_bd_pins SliceCol/Din]
+connect_bd_net [get_bd_pins SliceCol/Dout] [get_bd_pins readCol/gpio_io_i]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property location {5 1619 694} [get_bd_cells xlslice_0]
+set_property name SliceRow [get_bd_cells xlslice_0]
+startgroup
+set_property -dict [list CONFIG.DIN_TO {5} CONFIG.DIN_FROM {9} CONFIG.DIN_WIDTH {10} CONFIG.DIN_FROM {9} CONFIG.DOUT_WIDTH {5}] [get_bd_cells SliceRow]
+endgroup
+connect_bd_net [get_bd_pins VGA_SYNC_0/pixel_row] [get_bd_pins SliceRow/Din]
+connect_bd_net [get_bd_pins SliceRow/Dout] [get_bd_pins readRow/gpio_io_i]
+save_bd_design
+startgroup
+set_property -dict [list CONFIG.PCW_CRYSTAL_PERIPHERAL_FREQMHZ {50.000000} CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100} CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {25} CONFIG.PCW_EN_CLK1_PORT {1}] [get_bd_cells processing_system7_0]
+endgroup
+connect_bd_net [get_bd_pins VGA_SYNC_0/clock_25Mhz] [get_bd_pins processing_system7_0/FCLK_CLK1]
+startgroup
+make_bd_pins_external  [get_bd_cells VGA_SYNC_0]
+make_bd_intf_pins_external  [get_bd_cells VGA_SYNC_0]
+endgroup
+save_bd_design
+add_files -fileset constrs_1 -norecurse /home/ebrahim/vivado/Lab1/zyboVGA.xdc
+validate_bd_design
+save_bd_design
+make_wrapper -files [get_files /home/ebrahim/vivado/Lab1/Lab1_sf/Lab1_sf.srcs/sources_1/bd/Lab1_sf/Lab1_sf.bd] -top
+add_files -norecurse /home/ebrahim/vivado/Lab1/Lab1_sf/Lab1_sf.srcs/sources_1/bd/Lab1_sf/hdl/Lab1_sf_wrapper.vhd
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file mkdir /home/ebrahim/vivado/Lab1/Lab1_sf/Lab1_sf.sdk
+file copy -force /home/ebrahim/vivado/Lab1/Lab1_sf/Lab1_sf.runs/impl_1/Lab1_sf_wrapper.sysdef /home/ebrahim/vivado/Lab1/Lab1_sf/Lab1_sf.sdk/Lab1_sf_wrapper.hdf
+

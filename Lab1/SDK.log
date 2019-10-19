@@ -1,0 +1,5 @@
+01:04:34 INFO  : Registering command handlers for SDK TCF services
+01:04:37 INFO  : Launching XSCT server: xsct -n -interactive /home/ebrahim/vivado/Lab1/temp_xsdb_launch_script.tcl
+01:04:38 INFO  : XSCT server has started successfully.
+01:04:39 INFO  : Successfully done setting XSCT server connection channel  
+01:04:39 INFO  : Successfully done setting SDK workspace  
