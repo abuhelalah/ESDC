@@ -1,0 +1,262 @@
+
+*** Running vivado
+    with args -log lab1_ob_VGA_SYNC_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab1_ob_VGA_SYNC_0_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source lab1_ob_VGA_SYNC_0_0.tcl -notrace
+Command: synth_design -top lab1_ob_VGA_SYNC_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12690 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1172.625 ; gain = 67.996 ; free physical = 8167 ; free virtual = 31091
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'lab1_ob_VGA_SYNC_0_0' [/home/ebrahim/vivado/Lab1/opcional1/Lab_ob/Lab_ob.srcs/sources_1/bd/lab1_ob/ip/lab1_ob_VGA_SYNC_0_0/synth/lab1_ob_VGA_SYNC_0_0.vhd:70]
+INFO: [Synth 8-3491] module 'VGA_SYNC' declared at '/home/ebrahim/vivado/Lab1/opcional1/Lab_ob/Lab_ob.srcs/sources_1/bd/lab1_ob/ipshared/6452/VGA_SYNC.VHD:24' bound to instance 'U0' of component 'VGA_SYNC' [/home/ebrahim/vivado/Lab1/opcional1/Lab_ob/Lab_ob.srcs/sources_1/bd/lab1_ob/ip/lab1_ob_VGA_SYNC_0_0/synth/lab1_ob_VGA_SYNC_0_0.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'VGA_SYNC' [/home/ebrahim/vivado/Lab1/opcional1/Lab_ob/Lab_ob.srcs/sources_1/bd/lab1_ob/ipshared/6452/VGA_SYNC.VHD:35]
+INFO: [Synth 8-256] done synthesizing module 'VGA_SYNC' (1#1) [/home/ebrahim/vivado/Lab1/opcional1/Lab_ob/Lab_ob.srcs/sources_1/bd/lab1_ob/ipshared/6452/VGA_SYNC.VHD:35]
+INFO: [Synth 8-256] done synthesizing module 'lab1_ob_VGA_SYNC_0_0' (2#1) [/home/ebrahim/vivado/Lab1/opcional1/Lab_ob/Lab_ob.srcs/sources_1/bd/lab1_ob/ip/lab1_ob_VGA_SYNC_0_0/synth/lab1_ob_VGA_SYNC_0_0.vhd:70]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1213.125 ; gain = 108.496 ; free physical = 8106 ; free virtual = 31030
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1213.125 ; gain = 108.496 ; free physical = 8093 ; free virtual = 31017
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1546.773 ; gain = 0.000 ; free physical = 7440 ; free virtual = 30365
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7406 ; free virtual = 30331
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7406 ; free virtual = 30331
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7408 ; free virtual = 30333
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element h_count_reg was removed.  [/home/ebrahim/vivado/Lab1/opcional1/Lab_ob/Lab_ob.srcs/sources_1/bd/lab1_ob/ipshared/6452/VGA_SYNC.VHD:62]
+WARNING: [Synth 8-6014] Unused sequential element v_count_reg was removed.  [/home/ebrahim/vivado/Lab1/opcional1/Lab_ob/Lab_ob.srcs/sources_1/bd/lab1_ob/ipshared/6452/VGA_SYNC.VHD:81]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7399 ; free virtual = 30324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 4     
+	                1 Bit    Registers := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module VGA_SYNC 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 4     
+	                1 Bit    Registers := 12    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element U0/h_count_reg was removed.  [/home/ebrahim/vivado/Lab1/opcional1/Lab_ob/Lab_ob.srcs/sources_1/bd/lab1_ob/ipshared/6452/VGA_SYNC.VHD:62]
+WARNING: [Synth 8-6014] Unused sequential element U0/v_count_reg was removed.  [/home/ebrahim/vivado/Lab1/opcional1/Lab_ob/Lab_ob.srcs/sources_1/bd/lab1_ob/ipshared/6452/VGA_SYNC.VHD:81]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7389 ; free virtual = 30314
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7090 ; free virtual = 30014
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7089 ; free virtual = 30014
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7086 ; free virtual = 30011
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7075 ; free virtual = 29999
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7075 ; free virtual = 29999
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7075 ; free virtual = 29999
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7075 ; free virtual = 29999
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7075 ; free virtual = 29999
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7075 ; free virtual = 29999
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |     7|
+|3     |LUT3 |    11|
+|4     |LUT4 |     6|
+|5     |LUT5 |     7|
+|6     |LUT6 |    12|
+|7     |FDRE |    52|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+---------+------+
+|      |Instance |Module   |Cells |
++------+---------+---------+------+
+|1     |top      |         |    97|
+|2     |  U0     |VGA_SYNC |    97|
++------+---------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7075 ; free virtual = 29999
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1546.773 ; gain = 108.496 ; free physical = 7130 ; free virtual = 30055
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1546.773 ; gain = 442.145 ; free physical = 7130 ; free virtual = 30055
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+13 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1554.781 ; gain = 462.738 ; free physical = 7024 ; free virtual = 29949
+INFO: [Common 17-1381] The checkpoint '/home/ebrahim/vivado/Lab1/opcional1/Lab_ob/Lab_ob.runs/lab1_ob_VGA_SYNC_0_0_synth_1/lab1_ob_VGA_SYNC_0_0.dcp' has been generated.
